@@ -288,7 +288,7 @@ endif()
 
 ###############################################################################
 # Asio headers
-target_include_directories(elements PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/external/asio/asio/include)
+target_include_directories(elements PUBLIC ${ELEMENTS_ASIO_INCLUDE_DIR})
 
 ###############################################################################
 # Global options

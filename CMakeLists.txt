@@ -13,6 +13,7 @@ set (CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(ElementsConfigCommon)
 
+set(ELEMENTS_ASIO_INCLUDE_DIR "" CACHE STRING "")
 option(ELEMENTS_BUILD_EXAMPLES "build Elements library examples" ON)
 option(ELEMENTS_ENABLE_LTO "enable link time optimization for Elements targets" OFF)
 set(ELEMENTS_HOST_UI_LIBRARY "" CACHE STRING "gtk, cocoa or win32")

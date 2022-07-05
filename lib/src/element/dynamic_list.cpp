@@ -22,7 +22,7 @@ namespace cycfi { namespace elements
             return make_limits(float(_main_axis_full_size),  secondary_limits);
          }
       }
-      return {{ 0, 0 }, { 0, 0 }};
+      return {{ 0, 0 }, { full_extent, 0 }};
    }
 
    void dynamic_list::draw(context const& ctx)

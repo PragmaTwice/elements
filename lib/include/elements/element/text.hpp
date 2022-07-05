@@ -189,12 +189,13 @@ namespace cycfi { namespace elements
 
       text_function           on_text;
       text_function           on_enter;
+      
+      std::string             _placeholder;
 
    private:
 
       void                    paste(view& v, int start, int end) override;
 
-      std::string             _placeholder;
       bool                    _first_focus;
    };
 }}

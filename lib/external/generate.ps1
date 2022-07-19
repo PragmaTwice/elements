@@ -6,3 +6,4 @@ meson setup meson-build --backend vs2022 --buildtype release -D b_vscrt=mt --aut
 (meson compile -C meson-build)
 echo $null >> meson-build/subprojects/freetype/libfreetype.a
 (meson install -C meson-build --destdir install)
+echo success

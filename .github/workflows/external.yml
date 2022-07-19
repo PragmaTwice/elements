@@ -34,4 +34,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: external-libs-${{ matrix.arch }}
-        path: cairo
+        path: cairo/meson-build/install

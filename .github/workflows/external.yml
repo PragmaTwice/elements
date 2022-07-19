@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     strategy:
       matrix:
         arch: [ x86, x64 ]
@@ -20,6 +20,10 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
       with:
         msbuild-architecture: ${{ matrix.arch }}
+    
+    - name: Install Meson
+      run: |
+       pip install meson
 
     - name: Build
       run: |

@@ -3,5 +3,5 @@ cd cairo
 git checkout 1.17.6
 
 meson setup meson-build --backend vs2022 --buildtype release -D b_vscrt=mt --auto-features disabled -D fontconfig=enabled -D freetype=enabled -D png=enabled
-meson compile -C meson-build
-meson install -C meson-build --destdir install
+(meson compile -C meson-build)
+(meson install -C meson-build --destdir install)

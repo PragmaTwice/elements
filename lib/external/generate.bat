@@ -1,10 +1,7 @@
-git clone https://github.com/freedesktop/fontconfig
-cd fontconfig
-git checkout 2.14.0
-vcvars64.bat
-meson setup build64 --buildtype release -D b_vscrt=mt --auto-features disabled
-meson install -C build64 --destdir install
-vcvars32.bat
-meson setup build32 --buildtype release -D b_vscrt=mt --auto-features disabled
-meson install -C build32 --destdir install
+git clone git://anongit.freedesktop.org/git/cairo
+cd cairo
+git checkout 1.17.6
 
+meson setup build64 --buildtype release -D b_vscrt=mt --auto-features disabled -D fontconfig=enabled -D freetype=enabled -D png=enabled
+meson compile -C build64
+meson install -C build64 --destdir install

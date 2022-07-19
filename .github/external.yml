@@ -1,0 +1,30 @@
+name: build external libs
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        arch: [ x86, x64 ]
+
+    steps:
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.1.1
+      with:
+        msbuild-architecture: ${{ matrix.arch }}
+
+    - name: Build
+      run: |
+        ./lib/external/generate.bat
+
+    - name: Archive
+      uses: actions/upload-artifact@v3
+      with:
+        name: external-libs-${{ matrix.arch }}
+        path: cairo

@@ -3,8 +3,10 @@ name: build external libs
 on:
   push:
     branches: [ master ]
+    paths: [ lib/external/generate.ps1 ]
   pull_request:
     branches: [ master ]
+    paths: [ lib/external/generate.ps1 ]
 
 jobs:
   build:

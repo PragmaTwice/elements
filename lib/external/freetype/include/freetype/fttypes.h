@@ -4,7 +4,7 @@
  *
  *   FreeType simple types definitions (specification only).
  *
- * Copyright 1996-2018 by
+ * Copyright (C) 1996-2021 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -22,8 +22,8 @@
 
 #include <ft2build.h>
 #include FT_CONFIG_CONFIG_H
-#include FT_SYSTEM_H
-#include FT_IMAGE_H
+#include <freetype/ftsystem.h>
+#include <freetype/ftimage.h>
 
 #include <stddef.h>
 
@@ -461,8 +461,8 @@ FT_BEGIN_HEADER
    *
    *   finalizer ::
    *     A pointer to a 'generic finalizer' function, which will be called
-   *     when the object is destroyed.  If this field is set to NULL, no code
-   *     will be called.
+   *     when the object is destroyed.  If this field is set to `NULL`, no
+   *     code will be called.
    */
   typedef struct  FT_Generic_
   {
@@ -544,10 +544,10 @@ FT_BEGIN_HEADER
    *
    * @fields:
    *   prev ::
-   *     The previous element in the list.  NULL if first.
+   *     The previous element in the list.  `NULL` if first.
    *
    *   next ::
-   *     The next element in the list.  NULL if last.
+   *     The next element in the list.  `NULL` if last.
    *
    *   data ::
    *     A typeless pointer to the listed object.
